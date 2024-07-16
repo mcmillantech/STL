@@ -1,0 +1,5 @@
+dbhost		localhost
+dbname		stl
+dbpw		sql
+dbuser		root
+

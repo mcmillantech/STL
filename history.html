@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Dashboard history</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="dashboard.js"></script>
+        <link type="text/css" rel="stylesheet" href="stl.css">
+    </head>
+    <body>
+        <div id="content" style="margin-left: 40px;">
+        <div><h2>Download historic data</div>
+            <div id="formd">
+              
+                <span class='prompt'>Start from</span>
+                <span class="input">
+                    dd <input type="text" size="2" name="stday" id="stday">
+                    mm <input type="text" size="2" name="stmon" id="stmon">
+                    yy <input type="text" size="4" name="styear" id="styear"
+                              value = '2024'>&nbsp;&nbsp;Time&nbsp;
+                    hh <input type="text" size="2" name="sttime" id="sttime">
+                </span><br><br>
+                
+                <span class='prompt'>End</span>
+                <span class="input">
+                    dd <input type="text" size="2" name="ndday" id="ndday">
+                    mm <input type="text" size="2" name="ndmon" id="ndmon">
+                    yy <input type="text" size="4" name="ndyear" id="ndyear"
+                              value = '2024'>&nbsp;&nbsp;Time&nbsp;
+                    hh <input type="text" size="2" name="ndhh" id="ndhh">
+                </span><br><br>
+                
+                <div id='hisnext'>
+                    <button onClick='hisPost()'> Next </button>
+                </div>
+                <div id='hisfile' style='visibility:hidden'>
+                    <span class='prompt'>Download file</span>
+                    <span class="input">
+                        <input type='text' id='hisfname' size ='32' value=''>
+                    </span>
+                        <br><br>
+                    <button onClick='hisGo()'> Download  </button>
+                </div>
+          </div>
+              
+          </div>
+    </body>
+</html>
