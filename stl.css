@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-May-2024, 11:30:49
+    Author     : John
+*/
+
+body {
+    margin: 0;
+/*    background-color: #fcfff0; */
+    background-color: #f8ffe8;
+}
+
+.banner {
+    width:  100%;
+    height: 80px;
+    background-color: #ff6900;
+    color:  white;
+}
+.menubar {
+    width:  100%;
+    background-color: #cccccc;
+    height: 30px;
+    padding-top: 5px;
+}
+.menu {
+    float: left;
+    margin-left: 15px;
+    height: 100%
+}   
+.menu:hover {
+    background-color: #dddddd;
+}
+
+.prompt {
+    position:		absolute;
+    left:		40px;
+    width:		200px;
+}
+
+.input {
+    position:		absolute;
+    left:		200px;
+}
+
+.postprompt {
+    position:		absolute;
+    left:		300px;
+}
+
+/* --------  For job report ---------- */
+.jobName {
+    position:	absolute;
+    left:       40px;
+}
+
+.jobStart {
+    position:	absolute;
+    left:       240px;
+}
+
+.jobTime {
+    position:	absolute;
+    left:       300px;
+}
+
+.jobTemp {
+    position:	absolute;
+    left:       380px;
+}
+
+.jobPress {
+    position:	absolute;
+    left:       460px;
+}
