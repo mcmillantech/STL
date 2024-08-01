@@ -42,7 +42,8 @@ function startApp() {
 /* ----------  receiver from form in logon.php ---------
  * Passes up to logcheck.php 
  * 
- * @returns {undefined}
+ * This replaces AJAX calls
+ * 
  */
 async function logCheck() {
 
@@ -66,11 +67,10 @@ async function logCheck() {
         }   // End of 2nd parameter of fetch
     )       // End of fetch parameters
 
-   .then(function (response) {
-       console.log("Response " + response);
+   .then(function (response) {    // Methid of foo. Seems to pull out response
         return response.text();
-    }) 
-   .then(function (body) {              // Returned message
+    })
+   .then(function (body) {        // Returned message
        onLogCheck (body);
     });
 }
@@ -182,7 +182,7 @@ function startupLoginCallback (dta) {
     let obj = JSON.parse(dta);                  // Check login to HMS
     if (!obj.success){
         errorShow('log in ', obj.message,
-            'It seems your booth user or password are wrong');
+            'Error connecting to booth. Please contact STL');
         logOff();
     }
     boothApi('tags', startupTagsCallback);

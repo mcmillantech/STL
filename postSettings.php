@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html>S
     <head>
         <title>
             STL Post Settings
@@ -15,17 +15,10 @@
         <div class="menu" onclick="window.location='index.php'">HOME</div>
         </div>
 <?php
-//print_r($_POST);
+
 echo "<br><br>";
 //    require_once 'header.php';
-    require_once 'common.php';
-
-    $config = setConfig();
-    $dbConnection = dbConnect($config);
-//    showHeader("Post settings");
-    
-    $mysqli = dbConnect($config);
-
+S
 $sql = "UPDATE customers SET "
         . "User=" . postField('User')
         . ", Password=" . postField('Password')

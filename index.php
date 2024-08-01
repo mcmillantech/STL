@@ -37,6 +37,7 @@
     </head>
     <body onload="startPage()">
 <?php
+//    session_start();
     require 'header.php';
     showHeader(" STL Dashboard");
 /*
@@ -49,7 +50,28 @@
             doInstantValues(1);
         4: startApp();
  *      5 startupMakeBoothUrls
- */    
+ */
+    if (array_key_exists("action", $_GET)) {
+        postNewJob();
+    }
+    
+    function postNewJob() {
+        require_once 'common.php';
+
+        $config = setConfig();
+        $dbConnection = dbConnect($config);
+        $mysqli = dbConnect($config);
+ 
+        $jobNo = addslashes($_POST['jobno']);
+        $cusId = 3;                 // KLUDGE!!!
+        $sdate = date("Y/m/d h:i");
+        $sql = "INSERT into jobs (jobno, customer, date) "
+                ."VALUES('$jobNo', $cusId, '$sdate')";
+//        $mysqli->query($sql)
+//            or die ("Error updating item " . mysqli_error($mysqli));
+        $_SESSION['booth'] = 3;
+        $_SESSION['job'] = $jobNo;
+    }
 ?>
 
         <div id="content" style="margin-left: 40px;">
